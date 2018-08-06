@@ -1,0 +1,20 @@
+<div >   
+        
+    
+    <p>Hello Home Component
+        <button (click)="this.navToProfile()" >Nav to Profile</button>
+    </p>
+
+    <h2>Posts</h2>
+
+    <ul class="items">
+        <li   *ngFor="let posts of postResp">
+            <h3>UserID: {{posts.userId}}</h3>
+            <h3 (click)="onSelect($event)" id={{posts.id}}>ID: {{posts.id}}</h3>
+            <h3>Title: {{posts.title}}</h3>
+            <h3>Body: {{posts.body}}</h3>
+        </li>
+    </ul>
+
+
+</div>

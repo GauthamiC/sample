@@ -1,0 +1,25 @@
+<div>
+    <h2>Comments of the post ID: {{urlID}}</h2>
+    <div *ngFor="let comments of commentResp">
+      <div *ngIf="comments.id == urlID">
+            <h3>Post ID: {{comments.postId}}</h3>
+            <h3>ID: {{comments.id}}</h3>
+            <h3>Name: {{comments.name}}</h3>
+            <h3>Email: {{comments.email}}</h3>
+            <h3>Body: {{comments.body}}</h3>
+      </div>
+    </div>  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <app-profile-detail ></app-profile-detail>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <app-comments (messageEvent)="receiveMessage($event)"></app-comments>
+    <h2>Message From Comments Child Using Output and EventEmitter: {{messageFromComment}}</h2>
+</div>
